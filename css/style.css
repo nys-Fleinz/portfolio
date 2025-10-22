@@ -96,22 +96,45 @@ nav>div>a>img {
 
 #footer-accueil {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
     height: 100px;
 }
 
 #footer-accueil>h1 {
-    font-size: 2rem;
-    flex-grow: 1;
-}
-
-#footer-date {
     opacity: 50%;
-    text-align: right;
+    text-align: end;
+    margin-inline: 80px;
 }
 
-#footer-text {
-    text-align: center;
+#footer-accueil>div {
+    display: inline-flex;
+    align-items: center;
+    height: 80%;
+}
+
+#footer-accueil>div>img {
+    margin-left: 60px;
+    margin-right: 20px;
+    border-radius: 50%;
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+
+#grille-placement {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-inline: auto;
+    width: 75%;
+}
+
+#biographie {
+    grid-column: 2/7;
+}
+
+#parcours {
+    grid-column: 4/12;
+    grid-row: 2/3;
 }
