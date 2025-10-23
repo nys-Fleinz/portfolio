@@ -142,13 +142,14 @@ nav>div>a>img {
 
 .timeline {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 30px 1fr 1fr;
     box-sizing: border-box;
+    position: relative;
 }
 
 .timeline-container {
     transition: 0.2s;
-    grid-column: 2/4;
+    grid-column: 3/5;
     height: 180px;
     width: 100%;
     background-color: rgba(58, 58, 58, 0.49);
@@ -164,7 +165,8 @@ nav>div>a>img {
 }
 
 .timeline-content {
-    padding: 10px;
+    padding-block: 15px;
+    padding-inline: 20px
 }
 
 .timeline-content>h2 {
@@ -181,19 +183,41 @@ nav>div>a>img {
     font-size: 0.8rem;
 }
 
-#parcours-illustration {
-    grid-column: 1/2;
-}
-
 .timeline-container-image {
     display: flex;
+    grid-column: 1/2;
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 .timeline-container-image>img {
     object-fit: contain;
     height: 120px;
     aspect-ratio: 1/1;
+}
+
+.timeline-container-image::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+    top: 50%;
+    left: calc(100% + 1px);
+    transform: translate(-50%, -50%);
+}
+
+#timeline-separator {
+    width: 2px;
+    box-shadow: 0 0 5px 5px rgba(197, 195, 195, 0.2);
+    background-color: white;
+    grid-row: 1/8;
+    grid-column: 2;
 }
