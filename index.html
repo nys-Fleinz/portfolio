@@ -13,26 +13,26 @@
 <nav>
     <div>
         <a href="#accueil">
-            <img src="assets/images/person-circle.svg">
-            <h2>Moi</h2>
+            <img src="assets/images/nav/person-arms-up.svg">
+            <h2>Accueil</h2>
         </a>
     </div>
     <div>
         <a href="#biographie">
-            <img src="assets/images/person-circle.svg">
-            <h2>Moi</h2>
+            <img src="assets/images/nav/person-lines-fill.svg">
+            <h2>Biographie</h2>
         </a>
     </div>
     <div>
         <a href="#parcours">
-            <img src="assets/images/person-circle.svg">
-            <h2>Moi</h2>
+            <img src="assets/images/nav/signpost-2-fill.svg">
+            <h2>Parcours</h2>
         </a>
     </div>
     <div>
         <a href="#projets">
-            <img src="assets/images/person-circle.svg">
-            <h2>Moi</h2>
+            <img src="assets/images/nav/terminal-fill.svg">
+            <h2>Projets</h2>
         </a>
     </div>
 </nav>
@@ -43,13 +43,10 @@
         <h1 id="monName">Ethan Seulin</h1>
     </header>
     <div id="video-accueil">
-        <img src="assets/images/giphy.gif">
+        <video src="assets/videos/video-acc.mkv" autoplay muted loop playsinline></video>
     </div>
     <div id="footer-accueil">
-        <div>
-            <img src="assets/images/maPhoto.gif">
-            <h1>Développeur junior</h1>
-        </div>
+        <h1>PORTFOLIO</h1>
         <h1>©2025</h1>
     </div>
 </section>
@@ -58,6 +55,8 @@
 <main>
     <div id="grille-placement">
         <div id="biographie">
+            <h1>Qui suis-je ?</h1>
+
             <p>Bonjour ! Je suis <strong>Ethan</strong> — Développeur débutant<br><br>J'étudie l'informatique à
                 Villeneuve-d’Ascq, aujourd'hui en deuxième année de BUT Informatique.
                 Je suis passionné du développement.
@@ -74,8 +73,8 @@
         </div>
 
 
+        <h1 id="title-parcours" class="title">MON PARCOURS</h1>
         <div id="parcours">
-            <h1>Mes aventures</h1>
             <div class="timeline">
                 <div id="timeline-separator"></div>
 
@@ -164,52 +163,15 @@
     </div>
 
     <section id="projets">
-        <h1>MES PROJETS</h1>
+        <h1 class="title">MES PROJETS</h1>
         <div id="projets-container">
             <div class="projets-item" style="background-color: #101010;">
                 <h2>Widget SoundCloud</h2>
                 <div class="projets-grid">
                     <p class="projets-grid-row1">La description du projet AJKHFAIHEFGIOAEFGIo</p>
-                    <a class="projets-grid-row2"><video src="assets/videos/video-widget.mp4" autoplay muted loop playsinline></video></a>
-                </div>
-                <div class="projets-language">
-                    <span>Java</span>
-                    <span>JS</span>
-                    <span>Python</span>
-                </div>
-            </div>
-            <div class="projets-item" style="background-color: #150050;">
-                <h2>Widget Soundcloud</h2>
-                <div class="projets-grid">
-                    <p class="projets-grid-row1">La description du projet AJKHFAIHEFGIOAEFGIo</p>
-                    <a class="projets-grid-row2"><img src="https://user-images.githubusercontent.com/72570954/157289607-f74a1e8d-9d71-444f-a4a1-46426c734800.png"
-                                                      alt="lien projet github"></a>
-                </div>
-                <div class="projets-language">
-                    <span>Java</span>
-                    <span>JS</span>
-                    <span>Python</span>
-                </div>
-            </div>
-            <div class="projets-item" style="background-color: #3F0077;">
-                <h2>Widget Soundcloud</h2>
-                <div class="projets-grid">
-                    <p>La description du projet AJKHFAIHEFGIOAEFGIo</p>
-                    <a><img src="https://user-images.githubusercontent.com/72570954/157289607-f74a1e8d-9d71-444f-a4a1-46426c734800.png"
-                            alt="lien projet github"></a>
-                </div>
-                <div class="projets-language">
-                    <span>Java</span>
-                    <span>JS</span>
-                    <span>Python</span>
-                </div>
-            </div>
-            <div class="projets-item" style="background-color: #54007e;">
-                <h2>Widget SoundCloud</h2>
-                <div class="projets-grid">
-                    <p class="projets-grid-row1">La description du projet AJKHFAIHEFGIOAEFGIo</p>
-                    <a class="projets-grid-row2"><img src="https://user-images.githubusercontent.com/72570954/157289607-f74a1e8d-9d71-444f-a4a1-46426c734800.png"
-                                                      alt="lien projet github"></a>
+                    <a class="projets-grid-row2">
+                        <video src="assets/videos/video-widget.mp4" autoplay muted loop playsinline></video>
+                    </a>
                 </div>
                 <div class="projets-language">
                     <span>Java</span>
@@ -218,12 +180,48 @@
                 </div>
             </div>
 
-            <div class="projets-item" style="background-color: #610094;">
-                <h2>Widget Soundcloud</h2>
+            <div class="projets-item" style="background-color: #150050;">
+                <h2>Selfbot Discord</h2>
+
                 <div class="projets-grid">
-                    <p>La description du projet AJKHFAIHEFGIOAEFGIo</p>
-                    <a><img src="https://user-images.githubusercontent.com/72570954/157289607-f74a1e8d-9d71-444f-a4a1-46426c734800.png"
-                            alt="lien projet github"></a>
+                    <p class="projets-grid-row2">La description du projet AJKHFAIHEFGIOAEFGIo</p>
+                    <a class="projets-grid-row1">
+                        <video src="assets/videos/video-kleinz.mp4" autoplay muted loop playsinline></video>
+                    </a>
+                </div>
+                <div class="projets-language">
+                    <span>Java</span>
+                    <span>JS</span>
+                    <span>Python</span>
+                </div>
+            </div>
+
+            <div class="projets-item" style="background-color: #3F0077;">
+                <h2>Mazy</h2>
+                <div class="projets-grid">
+                    <p class="projets-grid-row1">La description du projet AJKHFAIHEFGIOAEFGIo</p>
+                    <a class="projets-grid-row2">
+                        <img src="assets/images/projets/maze.png"
+                             alt="lien projet github"
+                             style="width: 50%; height: auto;">
+                    </a>
+                </div>
+                <div class="projets-language">
+                    <span>Java</span>
+                    <span>JS</span>
+                    <span>Python</span>
+                </div>
+            </div>
+
+            <div class="projets-item" style="background-color: #54007e;">
+                <h2>Pêche aux Jetons</h2>
+                <div class="projets-grid">
+                    <p class="projets-grid-row2">La description du projet AJKHFAIHEFGIOAEFGIo</p>
+                    <a class="projets-grid-row1">
+                        <img src="assets/images/projets/stealer.gif"
+                             alt="lien projet github"
+                             style="width: 80%; height: auto; align-self: center;">
+                    </a>
                 </div>
                 <div class="projets-language">
                     <span>Java</span>

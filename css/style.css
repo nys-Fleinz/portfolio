@@ -6,6 +6,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+
 nav {
     position: fixed;
     background-color: rgba(39, 39, 39, 0.10);
@@ -18,10 +24,12 @@ nav {
     left: 20px;
     border-radius: 18px;
     z-index: 1000;
+    transition: 0.2s;
 }
 
 nav>div>a {
     display: flex;
+    text-decoration: none;
     align-items: center;
     margin-block: 4px;
     margin-inline: 5px;
@@ -36,7 +44,14 @@ nav>div:last-child>a {
 }
 
 nav>div>a>h2 {
+    color: white;
     display: none;
+}
+
+nav>div:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    transition: 0.2s;
 }
 
 nav:hover>div>a>h2 {
@@ -48,8 +63,11 @@ nav:hover>div>a>h2 {
 }
 
 nav>div>a>img {
-    width: 50px;
-    height: 50px;
+    padding: 7px;
+    border-radius: 16px;
+    border: solid 1px rgba(255, 255, 255, 0.06);
+    width: 35px;
+    height: 35px;
 }
 
 #monName {
@@ -89,7 +107,7 @@ nav>div>a>img {
     min-height: 0;
 }
 
-#video-accueil>img {
+#video-accueil>video {
     object-fit: cover;
     height: 100%;
 }
@@ -106,21 +124,12 @@ nav>div>a>img {
     opacity: 50%;
     text-align: end;
     margin-inline: 80px;
+    font-size: 3.5rem;
 }
 
-#footer-accueil>div {
+.title {
+    font-size: 3rem;
     opacity: 90%;
-    display: inline-flex;
-    align-items: center;
-    height: 70%;
-}
-
-#footer-accueil>div>img {
-    margin-left: 85px;
-    margin-right: 20px;
-    border-radius: 50%;
-    height: 100%;
-    aspect-ratio: 1/1;
 }
 
 
@@ -132,12 +141,35 @@ nav>div>a>img {
 }
 
 #biographie {
-    grid-column: 2/7;
+    grid-column: 2/8;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px 50px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    overflow: hidden;
+    margin-block: 8vh 16vh;
 }
+
+#biographie h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #df5800;
+}
+
 
 #parcours {
     grid-column: 4/12;
-    grid-row: 2/3;
+    grid-row: 3;
+}
+
+#title-parcours {
+    text-align: center;
+    margin-inline: auto;
+    justify-self: center;
+    grid-row: 2;
+    grid-column: -1/1;
 }
 
 .timeline {
@@ -216,7 +248,7 @@ nav>div>a>img {
 }
 
 #timeline-separator {
-    width: 3px;
+    width: 2px;
     box-shadow: 0 0 5px 5px rgba(197, 195, 195, 0.2);
     border-radius: 100px;
     background-color: white;
@@ -232,6 +264,11 @@ nav>div>a>img {
     margin-bottom: 20vh;
     position: relative;
     background-color: #000000;
+}
+
+#projets>h1 {
+    text-align: center;
+    margin-top: 20vh;
 }
 
 #projets-container {
@@ -250,7 +287,7 @@ nav>div>a>img {
 
 .projets-item>h2 {
     font-size: 3rem;
-    margin-top: 25vh;
+    margin-top: 20vh;
 }
 
 .projets-item:nth-child(1) {
@@ -293,10 +330,12 @@ nav>div>a>img {
 
 .projets-grid-row1{
     align-self: start;
+    grid-column: 1;
 }
 
 .projets-grid-row2{
     align-self: end;
+    grid-column: 2;
 }
 
 .projets-grid>a {
