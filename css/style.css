@@ -450,7 +450,7 @@ nav>div>a>img {
 
 .aptitudes-carte {
     width: 100%;
-    height: calc(100% - 70px);
+    height: auto;
     display: flex;
     flex-direction: column;
     background: rgba(42, 42, 42, 0.24);
@@ -461,8 +461,8 @@ nav>div>a>img {
     border: 1px solid rgba(30, 30, 30);
 }
 
-.aptitudes-carte>hr {
-    margin: 0;
+.divider {
+    margin: 0 0 10px 0;
     width: 100%;
     align-self: center;
     background-color: rgb(30, 30, 30);
@@ -472,6 +472,7 @@ nav>div>a>img {
 .aptitudes-title {
     display: flex;
     padding: 0;
+    align-items: center;
     margin: 0 0 10px 0;
     flex-direction: row;
 }
@@ -480,12 +481,17 @@ nav>div>a>img {
     width: 40px;
     height: 40px;
     padding: 0;
-    color: greenyellow;
-    margin-right: 10px;
+    fill: #cfff8f;
+    margin-right: 30px;
 }
 
 .aptitudes-title>h3 {
-    font-size: 40px;
+    font-size: max(0.5rem, 2vw);
     padding: 0;
     margin: 0;
+}
+
+.aptitudes-liste {
+    font-size: 2rem;
+    height: min-content;
 }
