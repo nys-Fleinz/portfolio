@@ -34,7 +34,7 @@ nav {
 
 .folder>div>a.closed {
     transition: 0.3s ease-in;
-    transform: rotateZ(-180deg);
+    transform: rotateZ(-90deg);
 }
 
 .folder-items.closed {
