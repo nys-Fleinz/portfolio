@@ -9,6 +9,7 @@ body {
 html {
     scroll-behavior: smooth;
     scrollbar-width: none;
+    overflow-x: hidden;
 }
 
 
@@ -130,7 +131,8 @@ nav>div>a>img {
 
 .title {
     justify-self: center;
-    font-size: 3rem;
+    font-size: 4rem;
+    font-family: "Archivo Black", sans-serif;
     opacity: 90%;
     color: #df5800;
 }
@@ -161,6 +163,7 @@ nav>div>a>img {
 #biographie,
 #biographie-informations-contact,
 #activite {
+    font-family: Rubik, sans-serif;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
@@ -243,6 +246,7 @@ nav>div>a>img {
     grid-row: 4;
 }
 
+
 #title-parcours {
     text-align: center;
     margin-inline: auto;
@@ -259,7 +263,7 @@ nav>div>a>img {
 }
 
 .timeline-container {
-    transition: 0.2s;
+    transition: 0.5s ease-out;
     grid-column: 3/5;
     height: 180px;
     width: 100%;
@@ -268,6 +272,7 @@ nav>div>a>img {
     border: 1px solid rgba(255, 255, 255, 0.10);
     border-radius: 10px;
     margin-block: 10px;
+    transform: translateX(50vw);
 }
 
 .timeline-container:hover {
@@ -275,13 +280,21 @@ nav>div>a>img {
     box-shadow: 0 0 5px 5px rgba(197, 195, 195, 0.2);
 }
 
+.timeline-container.visible {
+    transform: translateX(0vw);
+}
+
+
 .timeline-content {
     padding-block: 15px;
-    padding-inline: 20px
+    padding-inline: 20px;
+    font-family: Rubik, sans-serif;
+
 }
 
 .timeline-content>h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    color: rgba(207, 255, 143, 0.52);
 }
 
 .timeline-content>p {
@@ -366,8 +379,10 @@ nav>div>a>img {
 }
 
 .projets-item>h2 {
+    font-family: "Momo Trust Display", sans-serif;
     font-size: 3rem;
     margin-top: 13vh;
+    color: #cfff8f;
 }
 
 .projets-item:nth-child(1) {
@@ -433,6 +448,7 @@ nav>div>a>img {
 }
 
 .projets-description {
+    font-family: Rubik, sans-serif;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
@@ -443,6 +459,8 @@ nav>div>a>img {
 }
 
 .projets-title {
+    font-family: "Momo Trust Display", sans-serif;
+    letter-spacing: 0.07em;
     margin: 0;
     font-size: 1.5rem;
     color: #df5800;
@@ -485,7 +503,7 @@ nav>div>a>img {
     align-content: center;
     height: min-content;
     justify-content: center;
-    margin-bottom: 15vh;
+    margin-bottom: 5vh;
 }
 
 .aptitudes-bg-container,
@@ -507,7 +525,7 @@ nav>div>a>img {
 }
 
 .aptitudes-bg-container>h1 {
-    margin: 0;
+    margin: 0 0 10px 0;
 }
 
 .aptitudes-container {
@@ -584,6 +602,7 @@ nav>div>a>img {
 }
 
 .aptitudes-liste-item {
+    font-family: "Rubik", sans-serif;
     color: rgb(153, 153, 153);
     font-size: 1.1rem;
     padding: 10px;
@@ -591,7 +610,100 @@ nav>div>a>img {
     background-color: rgb(54, 54, 54);
 }
 
+footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    background-color: #000000;
+    z-index: 0;
+}
 
-footer>img {
-    width: 10px;
+.footer-image {
+    position: absolute;
+    top: 15vh;
+    left: 10vw;
+    width: 80vw;
+    height: auto;
+    transform: translateY(40vh);
+    transition: transform 1s cubic-bezier(.17,.67,0,1);
+    z-index: -1;
+}
+
+
+
+.footer-image.visible {
+    transform: translateY(0);
+}
+
+.footer-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-foot,
+.footer-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+}
+
+.footer-foot {
+    height: 5vh;
+}
+
+.footer-head>div>h1 {
+    font-size: 4rem;
+    color: #cfff8f;
+    font-family: "Archivo Black", sans-serif;
+    margin: 0;
+}
+
+.footer-head>div>p {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    font-family: "Momo Trust Display", sans-serif;
+}
+
+.footer-head>div>p>a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #cfff8f;
+}
+
+
+.footer-made,
+.footer-copyright {
+    opacity: 50%;
+    font-family: "Rubik", sans-serif;
+}
+
+.footer-social {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vw;
+}
+
+.footer-social>a {
+    display: flex;
+    align-items: start;
+    height: 100%;
+    width: 100%;
+}
+
+.footer-social>a>img {
+    height: 80%;
 }
