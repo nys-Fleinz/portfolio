@@ -138,11 +138,21 @@ nav {
     height: 110px;
 }
 
+.portfolio {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 3.5rem;
+}
+
+.portfolio-date {
+    font-family: Rubik, sans-serif;
+    font-size: 3.6rem;
+}
+
 #footer-accueil>h1 {
     opacity: 50%;
     text-align: end;
     margin-inline: 80px;
-    font-size: 3.5rem;
+
 }
 
 .title {
