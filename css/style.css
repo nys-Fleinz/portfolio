@@ -28,7 +28,21 @@ nav {
     transition: 0.2s;
 }
 
-nav>div>a {
+.folder>div>a {
+    cursor: pointer;
+}
+
+.folder>div>a.closed {
+    transition: 0.3s ease-in;
+    transform: rotateZ(-180deg);
+}
+
+.folder-items.closed {
+    display: none;
+}
+
+.folder>div>a,
+.folder-items>div>a {
     display: flex;
     text-decoration: none;
     align-items: center;
@@ -36,26 +50,27 @@ nav>div>a {
     margin-inline: 5px;
 }
 
-nav>div:first-child>a {
+.folder-items>div:first-child>a {
     margin-top: 5px;
 }
 
-nav>div:last-child>a {
+.folder-items>div:last-child>a {
     margin-bottom: 5px;
 }
 
-nav>div>a>h2 {
+.folder-items>div>a>h2 {
     color: white;
     display: none;
 }
 
-nav>div:hover {
+.folder>div:hover,
+.folder-items>div:hover {
     background-color: rgba(255, 255, 255, 0.03);
     border-radius: 10px;
     transition: 0.2s;
 }
 
-nav:hover>div>a>h2 {
+.folder-items:hover>div>a>h2 {
     display: block;
     padding: 0;
     margin-block: 2px;
@@ -63,7 +78,8 @@ nav:hover>div>a>h2 {
     font-size: 1rem;
 }
 
-nav>div>a>img {
+.folder>div>a>img,
+.folder-items>div>a>img {
     padding: 7px;
     border-radius: 16px;
     border: solid 1px rgba(255, 255, 255, 0.06);
