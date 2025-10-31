@@ -60,16 +60,69 @@
 </nav>
 
 <section id="accueil">
-    <header id="header-accueil">
-        <img src="assets/images/iutLogo.png">
-        <h1 id="monName">Ethan Seulin</h1>
+    <header id="accueil-header">
+        <a href="https://iut.univ-lille.fr/" target="_blank" class="logo-iut-container"><img
+                src="assets/images/iutLogo.png"></a>
+        <a href="assets/cv/cvEthan.pdf" class="cv-download-container"><img src="assets/images/accueil/download.svg">
+            <p>Télécharger mon CV</p></a>
     </header>
-    <div id="video-accueil">
+
+    <div id="accueil-middle">
+        <div class="accueil-image">
+            <img src="assets/images/accueil/moi.png">
+        </div>
+        <div class="accueil-text">
+            <div>
+                <h1>Bonjour, je suis <strong>Ethan</strong> !</h1>
+                <span>Développeur Junior</span>
+                <p>Actuellement à la recherche d’un stage de <strong>10 semaines</strong> à partir d’avril 2026, <br>ainsi
+                    que d’une <strong>alternance</strong> pour l’année suivante.</p>
+                <a href="#projets">
+                    <p>Emmenez-moi à la suite !</p>
+                    <img src="assets/images/accueil/arrow-down.gif">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="accueil-footer">
+        <h1>PORTFOLIO</h1>
+    </div>
+</section>
+
+<section id="presentation">
+    <div class="presentation-video">
         <video src="assets/videos/video-acc.mkv" autoplay muted loop playsinline></video>
     </div>
-    <div id="footer-accueil">
-        <h1 class="portfolio">PORTFOLIO</h1>
-        <h1 class="portfolio-date">©2025</h1>
+
+    <div class="presentation-text">
+
+    </div>
+
+    <div class="presentation-info">
+        <div id="biographie-informations-contact">
+            <h1>Informations</h1>
+            <div id="informations-contact">
+                <div class="information-contact">
+                    <div>
+                        <img class="bio-icon" src="assets/images/contact/geo-alt-fill.svg">
+                        <p><strong>Localité: </strong>Roncq</p>
+                    </div>
+                    <div>
+                        <img class="bio-icon" src="assets/images/contact/person-vcard-fill.svg">
+                        <p><strong>Age: </strong>19 ans</p>
+                    </div>
+                </div>
+                <div class="information-contact">
+                    <div>
+                        <img class="bio-icon" src="assets/images/contact/envelope-at-fill.svg">
+                        <p><strong>Contact: </strong><a href="mailto:ethan.seulin@gmail.com">ethan.seulin@gmail.com</a>
+                        </p>
+                    </div>
+                    <a id="sendMailButton" href="mailto:ethan.seulin@gmail.com">Envoyer un mail</a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -200,17 +253,6 @@
                 </div>
 
                 <div class="timeline-container-image">
-                    <img src="assets/images/parcours/iutLille.png" alt="">
-                </div>
-                <div class="timeline-container">
-                    <div class="timeline-content">
-                        <span class="date">2024 - Présent</span>
-                        <h2>IUT A Villeneuve-d'Ascq</h2>
-                        <p>Actuellement en seconde année de BUT Informatique.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-container-image">
                     <img src="assets/images/parcours/chocmod.png" alt="">
                 </div>
                 <div class="timeline-container">
@@ -218,6 +260,17 @@
                         <span class="date">Juillet - Août 2025</span>
                         <h2>CHOCMOD - Job d'été</h2>
                         <p>Usine alimentaire. Ligne de production et maintenance.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-container-image">
+                    <img src="assets/images/parcours/iutLille.png" alt="">
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-content">
+                        <span class="date">2024 - Actuel</span>
+                        <h2>IUT A Villeneuve-d'Ascq</h2>
+                        <p>Actuellement en seconde année de BUT Informatique.</p>
                     </div>
                 </div>
             </div>
@@ -228,6 +281,7 @@
     <section id="projets">
         <h1 class="title">MES PROJETS</h1>
         <div id="projets-container">
+
             <div class="projets-item" style="background-color: #101010;">
                 <h2>Widget SoundCloud</h2>
                 <div class="projets-grid">
@@ -235,28 +289,39 @@
                         <p class="projets-title">
                             <strong>⤷ README.md</strong>
                         </p>
-                        <p class="projets-description">
-                            <strong> Résumé:</strong><br>
-                            Un widget overlay pour OBS fait pour afficher en temps réel
-                            les morceaux joués via l’API SoundCloud. Affiche la pochette, le titre, l’artiste, si liké,
-                            la barre
-                            de progression et gère les états pause/play via WebSocket pour la fluidité lors
-                            des streams.<br><br>
-                            <strong>Fonctionnalités:</strong><br>
-                            - Affichage dynamique de la pochette, titre et artiste.<br>
-                            - Barre de progression synchronisée (play/pause, reprise).<br>
-                            - Ressources à fetch() vérifiées et traitées avant affichage.<br>
-                            - Personnalisable pour l’overlay OBS (tailles, couleurs, animations).<br>
-                        </p>
+                        <div class="projets-description">
+                            <p>
+                                <strong>Résumé</strong><br>
+                                Un widget overlay pour OBS affichant en temps réel
+                                les morceaux joués.<br><br>
+                            </p>
+                        </div>
+                        <div class="projets-description">
+                            <strong>Prototypes abordés</strong>
+                            <ul>
+                                <li>Pas d'API SoundCloud donc usage d'un Scrobbler</li>
+                                <li>Serveur WebSocket pour communication instantanée</li>
+                                <li>Responsive design et animations fluides</li>
+                            </ul>
+                        </div>
+                        <div class="projets-description">
+                            <strong>Fonctionnalités</strong>
+                            <ul>
+                                <li>Affichage dynamique de la pochette, titre et artiste.</li>
+                                <li>Barre de progression synchronisée (play/pause, reprise).</li>
+                                <li>Ressources à fetch() vérifiées et traitées avant affichage.</li>
+                                <li>Personnalisable pour l’overlay OBS.</li>
+                            </ul>
+                        </div>
                     </div>
                     <a class="projets-grid-row2">
                         <video src="assets/videos/video-widget.mp4" autoplay muted loop playsinline></video>
+                        <div class="projets-language">
+                            <img src="assets/images/langages/html.svg" alt="HTML">
+                            <img src="assets/images/langages/javascript.svg" alt="JS">
+                            <img src="assets/images/langages/css.svg" alt="CSS">
+                        </div>
                     </a>
-                </div>
-                <div class="projets-language">
-                    <span>HTML</span>
-                    <span>JS</span>
-                    <span>CSS</span>
                 </div>
             </div>
 
@@ -264,28 +329,37 @@
                 <h2>Selfbot Discord</h2>
                 <div class="projets-grid">
                     <div class="projets-grid-row2">
-                        <p class="projets-title">
-                            <strong>⤷ README.md</strong>
-                        </p>
-                        <p class="projets-description">
-                            <strong> Résumé:</strong><br>
-                            Collection de scripts pour automatiser des tâches répétitives (modération, commandes
-                            utilitaires, routines). Conçu pour tester des automatisations, pas pour contourner les
-                            règles.<br><br>
-                            <strong>Fonctionnalités:</strong><br>
-                            - Scripts pour actions répétitives (modération, réponses automatiques).<br>
-                            - Planification et exécution de tâches récurrentes.<br>
-                            - Personnalisation du profil Discord encore plus poussée.
-                        </p>
+                        <div class="projets-description">
+                            <p>
+                                <strong>Résumé</strong><br>
+                                Collection de scripts pour automatiser des tâches répétitives (modération, commandes
+                                utilitaires, routines).
+                            </p>
+                        </div>
+                        <div class="projets-description">
+                            <strong>Prototypes abordés</strong>
+                            <ul>
+                                <li>Pas d'API SoundCloud donc usage d'un Scrobbler</li>
+                                <li>Serveur WebSocket pour communication instantanée</li>
+                                <li>Responsive design et animations fluides</li>
+                            </ul>
+                        </div>
+                        <div class="projets-description">
+                            <strong>Fonctionnalités</strong>
+                            <ul>
+                                <li>Scripts pour actions répétitives (modération, réponses automatiques).</li>
+                                <li>Planification et exécution de tâches récurrentes.</li>
+                                <li>Personnalisation du profil Discord encore plus poussée..</li>
+                            </ul>
+                        </div>
                     </div>
                     <a class="projets-grid-row1">
                         <video src="assets/videos/video-kleinz.mp4" autoplay muted loop playsinline></video>
+                        <div class="projets-language">
+                            <img src="assets/images/langages/javascript.svg" alt="JS">
+                            <img src="assets/images/langages/nodejs.svg" alt="NodeJS">
+                        </div>
                     </a>
-                </div>
-                <div class="projets-language">
-                    <span>JS</span>
-                    <span>Node</span>
-                    <span>Automation</span>
                 </div>
             </div>
 
@@ -296,63 +370,78 @@
                         <p class="projets-title">
                             <strong>⤷ README.md</strong>
                         </p>
-                        <p class="projets-description">
-                            <strong> Résumé:</strong><br>
-                            Jeu de labyrinthe (Mazy) avec niveaux, système de points et sauvegarde de parties. Permet
-                            d'activer des modificateurs pour changer la difficulté et le gameplay.<br><br>
-                            <strong>Fonctionnalités:</strong><br>
-                            - Niveaux progressifs avec difficulté croissante.<br>
-                            - Modificateurs de partie (brouillard, chronomètre, ennemis...).<br>
-                            - Système de points et classement local.<br>
-                            - Sauvegarde et reprise des parties.<br>
-                            - Parties personnalisables via les modificateurs.
-                        </p>
+                        <div class="projets-description">
+                            <p>
+                                <strong>Résumé</strong><br>
+                                Jeu de labyrinthe (Mazy) avec niveaux, système de points et sauvegarde de parties. Trois
+                                niveaux de difficultés avec plusieurs palliers.<br><br>
+                            </p>
+                        </div>
+                        <div class="projets-description">
+                            <strong>Prototypes abordés</strong>
+                            <ul>
+                            </ul>
+                        </div>
+                        <div class="projets-description">
+                            <strong>Fonctionnalités</strong>
+                            <ul>
+                                <li>Niveaux progressifs avec difficulté croissante.</li>
+                                <li>Modificateurs de partie (brouillard, chronomètre, ennemis...).</li>
+                                <li>Système de points et classement local.</li>
+                                <li>Sauvegarde et reprise des parties.</li>
+                                <li>Parties personnalisables via les modificateurs.</li>
+                            </ul>
+                        </div>
                     </div>
                     <a class="projets-grid-row2">
-                        <img src="assets/images/projets/maze.png" alt="lien projet github"
-                             style="width: 50%; height: auto;">
+                        <img src="assets/images/projets/maze.png" alt="lien projet github" style="width: 60%; height: auto;">
+                        <div class="projets-language">
+                            <img src="assets/images/langages/java.svg" alt="Java">
+                        </div>
                     </a>
-                </div>
-                <div class="projets-language">
-                    <span>Java</span>
-                    <span>Game</span>
-                    <span>Save</span>
                 </div>
             </div>
 
             <div class="projets-item" style="background-color: #54007e;">
-                <h2>Pêche aux Jetons</h2>
+                <h2>KASS BRIKERIE</h2>
                 <div class="projets-grid">
                     <div class="projets-grid-row2">
                         <p class="projets-title">
                             <strong>⤷ README.md</strong>
                         </p>
-                        <p class="projets-description">
-                            <strong> Résumé:</strong><br>
-                            Démonstration de sensibilisation montrant qu’un fichier apparemment anodin peut poser des
-                            risques. But pédagogique : apprendre à reconnaître les signaux d’alerte et éviter les
-                            erreurs. <br><br>
-                            <strong>Pourquoi ?</strong><br>
-                            - Projets utilisé pour mes amis afin de les sensibiliser ;) aux fichiers douteux.<br>
-                            - Apprendre à mes amis à vérfier les fichiers sur "virustotal" ou autre avant
-                            d'ouvrir.<br><br>
-
-                            <strong>Note:</strong><br>
-                            - Je n'ai pas accédé à leurs données sensibles.<br>
-                            - Aucunne donnée sensible n'a été divulgué.
-                        </p>
+                        <div class="projets-description">
+                            <p>
+                                <strong>Résumé</strong><br>
+                                Casse brique sur ligne de commande avec bonus, malus et affichage fluide.
+                            </p>
+                        </div>
+                        <div class="projets-description">
+                            <strong>Prototypes abordés</strong>
+                            <ul>
+                            </ul>
+                        </div>
+                        <div class="projets-description">
+                            <strong>Fonctionnalités</strong>
+                            <ul>
+                                <li>Niveaux progressifs avec difficulté croissante.</li>
+                                <li>Modificateurs de partie (brouillard, chronomètre, ennemis...).</li>
+                                <li>Système de points et classement local.</li>
+                                <li>Sauvegarde et reprise des parties.</li>
+                                <li>Parties personnalisables via les modificateurs.</li>
+                            </ul>
+                        </div>
                     </div>
                     <a class="projets-grid-row1">
-                        <img src="assets/images/projets/stealer.gif" alt="illustration démonstration"
-                             style="width: 80%; height: auto; align-self: center;">
+                        <img src="assets/images/projets/brick-breaker.png" alt="illustration démonstration"
+                             style="width: 100%; height: auto; align-self: center;">
+                        <div class="projets-language">
+                            <img src="assets/images/langages/java.svg" alt="Java">
+                            <span>JLine</span>
+                        </div>
                     </a>
                 </div>
-                <div class="projets-language">
-                    <span>API Windows</span>
-                    <span>API Discord</span>
-                    <span>Python</span>
-                </div>
             </div>
+
         </div>
     </section>
 
@@ -470,7 +559,7 @@
 
         <div class="footer-head">
             <div>
-                <h1>Intéressé ?</h1>
+                <h1>Intéressé(e) ?</h1>
                 <p>Je suis actuellement en recherche de stage !<br>Les infos sont <a
                         href="#informations-contact">ici</a> ;)
                 </p>
@@ -490,7 +579,7 @@
                 </a>
             </div>
             <div class="footer-made">
-                <p>Fais avec ❤️ et pur CSS</p>
+                <p>Fais sans IA et pur CSS ♥</p>
             </div>
         </div>
 
