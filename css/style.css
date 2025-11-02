@@ -878,6 +878,7 @@ footer {
 .footer-head>div>p {
     font-size: 1.3rem;
     line-height: 1.4;
+    margin-bottom: 10px;
     font-family: "Momo Trust Display", sans-serif;
 }
 
