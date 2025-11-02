@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     const elementsToAnimate = document.querySelectorAll(
-        '.footer-image, .timeline-container'
+        '.footer-image'
     );
 
     const observer = new IntersectionObserver((entries) => {
@@ -17,10 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if(entry.isIntersecting) {
                 if(entry.target.classList.contains('footer-image')) {
                     entry.target.classList.add('visible');
-                }
-                if(entry.target.classList.contains('timeline-container')) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
                 }
             } else {
                 if(entry.target.classList.contains('footer-image')) {

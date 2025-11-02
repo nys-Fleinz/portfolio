@@ -39,12 +39,6 @@
             </a>
         </div>
         <div>
-            <a href="#parcours">
-                <img src="assets/images/nav/signpost-2-fill.svg">
-                <h2>Parcours</h2>
-            </a>
-        </div>
-        <div>
             <a href="#projets">
                 <img src="assets/images/nav/terminal-fill.svg">
                 <h2>Projets</h2>
@@ -54,6 +48,12 @@
             <a href="#aptitudes">
                 <img src="assets/images/nav/tools.svg">
                 <h2>Compétences</h2>
+            </a>
+        </div>
+        <div>
+            <a href="#experiences">
+                <img src="assets/images/nav/signpost-2-fill.svg">
+                <h2>Experiences</h2>
             </a>
         </div>
     </div>
@@ -78,10 +78,10 @@
                 <div>
                     <h1>Bonjour, je suis<br><strong>Ethan Seulin</strong></h1>
                     <span>Développeur Junior</span>
-                    <p> <span>Je recherche :</span><br>
+                    <p><span>Je recherche :</span><br>
                         ● Un stage de <strong>10 semaines</strong> (6 avril - 15 juin 2026)<br>
                         ● Une <strong>alternance</strong> 3ème année de BUT (septembre 2027)</p>
-                    <a href="#projets" class="default-container">
+                    <a href="#presentation" class="default-container">
                         <p>Découvrez mon profil !</p>
                         <img src="assets/images/accueil/arrow-down.gif">
                     </a>
@@ -111,7 +111,7 @@
                 </div>
             </div>
             <p class="default-container">
-                Passionné par le développement depuis mes 10 ans, où j'ai donné vie à mes idées dans Minecraft
+                Passionné par le développement depuis mes 10 ans, quand j'ai donné vie à mes idées dans Minecraft
                 avec
                 quelques lignes de code.
                 <br>Je me concentre aujourd'hui sur le <strong>développement
@@ -218,16 +218,15 @@
                         <div class="projets-description">
                             <p>
                                 <strong>Résumé</strong><br>
-                                Collection de scripts pour automatiser des tâches répétitives (modération, commandes
-                                utilitaires, routines).
+                                Collection de scripts pour automatiser des tâches répétitives.
                             </p>
                         </div>
                         <div class="projets-description">
                             <strong>Prototypes abordés</strong>
                             <ul>
-                                <li>Pas d'API SoundCloud donc usage d'un Scrobbler</li>
-                                <li>Serveur WebSocket pour communication instantanée</li>
-                                <li>Responsive design et animations fluides</li>
+                                <li>Conception d'une architecture modulaire pour l'intégration continue</li>
+                                <li>Optimisation des scripts pour l'efficacité</li>
+                                <li>Gestion des limitations de l'API (rate limits)</li>
                             </ul>
                         </div>
                         <div class="projets-description">
@@ -259,7 +258,7 @@
                         <div class="projets-description">
                             <p>
                                 <strong>Résumé</strong><br>
-                                Jeu de labyrinthe avec niveaux de difficulté évolutifs.
+                                Labyrinthe avec niveaux de difficulté évolutifs.
                             </p>
                         </div>
                         <div class="projets-description">
@@ -301,7 +300,7 @@
                         <div class="projets-description">
                             <p>
                                 <strong>Résumé</strong><br>
-                                Casse brique sur ligne de commande avec bonus et malus.
+                                Casse brique sur ligne de commande avec bonus.
                             </p>
                         </div>
                         <div class="projets-description">
@@ -316,10 +315,9 @@
                             <strong>Fonctionnalités</strong>
                             <ul>
                                 <li>Niveaux progressifs avec difficulté croissante.</li>
-                                <li>Modificateurs de partie (brouillard, chronomètre, ennemis...).</li>
-                                <li>Système de points et classement local.</li>
-                                <li>Sauvegarde et reprise des parties.</li>
+                                <li>Bonus (grande barre, vitesse accéléré, multi balles...)</li>
                                 <li>Parties personnalisables via les modificateurs.</li>
+                                <li>Système de points et classement local.</li>
                             </ul>
                         </div>
                     </div>
@@ -334,6 +332,45 @@
                 </div>
             </div>
 
+            <div class="projets-item" style="background-color: #8000AA;">
+                <h2>Site web Covoiturage</h2>
+                <div class="projets-grid">
+                    <div class="projets-grid-row1">
+                        <p class="projets-title">
+                            <strong>⤷ README.md</strong>
+                        </p>
+                        <div class="projets-description">
+                            <p>
+                                <strong>Résumé</strong><br>
+                                Plateforme de covoiturage en ligne pour une entreprise fictive (Meta Ride).
+                            </p>
+                        </div>
+                        <div class="projets-description">
+                            <strong>Prototypes abordés</strong>
+                            <ul>
+                                <li>Analyser un cahier des charges</li>
+                                <li>Trouver la bonne solution au besoin</li>
+                                <li>Gestion de l'accessibilité du site</li>
+                            </ul>
+                        </div>
+                        <div class="projets-description">
+                            <strong>Fonctionnalités</strong>
+                            <ul>
+                                <li>Formulaires de reservation</li>
+                                <li>Trouver des trajets aux alentours</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="projets-grid-row2">
+                        <img src="assets/images/projets/siteWebCovoiturage.png" alt="illustration démonstration"
+                             style="width: 100%; height: auto; align-self: center;">
+                        <div class="projets-language">
+                            <img src="assets/images/langages/html.svg" alt="HTML">
+                            <img src="assets/images/langages/css.svg" alt="CSS">
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -443,68 +480,117 @@
     </section>
 
     <div id="experiences">
-        <div class="timeline">
-            <div id="timeline-separator"></div>
+        <h1 class="title">EXPERIENCES</h1>
+        <div class="experiences-grid">
 
-            <div class="timeline-container-image">
-                <img src="assets/images/parcours/restosDuCoeur.png" alt="Restos du Coeur Logo">
-            </div>
-            <div class="timeline-container">
-                <div class="timeline-content">
-                    <span class="date">Février 2017</span>
-                    <h2>Restos du Cœur - Stagiaire service client</h2>
-                    <p>Stagiaire service client à Blendecques.</p>
+            <div class="experiences-item default-container">
+                <div class="experiences-header">
+                    <div class="experiences-header-image default-container">
+                        <img src="assets/images/parcours/chocmod.png" alt="CHOCMOD Logo">
+                    </div>
+                    <div class="experiences-header-text">
+                        <span class="date">Juillet - Août 2025</span>
+                        <h2>CHOCMOD</h2>
+                        <p>Job d'été</p>
+                    </div>
+                </div>
+                <div class="experiences-container-text default-container">
+                    <p>Usine alimentaire. Ligne de production et maintenance.
+                        <br><br>
+                        <strong>Aptitudes :<br></strong>Endurance et esprit d'équipe.<br><br>Travaillant de nuit, j'ai
+                        découvert le milieu
+                        industriel, le respect des procédures de production et une première approche de la maintenance
+                        (résolution de problèmes).
+                    </p>
                 </div>
             </div>
 
-            <div class="timeline-container-image">
-                <img src="assets/images/parcours/gardin.png" alt="">
+            <div class="experiences-item default-container">
+                <div class="experiences-header">
+                    <div class="experiences-header-image default-container">
+                        <img src="assets/images/parcours/intermarche.png" alt="Intermarché Logo">
+                    </div>
+                    <div class="experiences-header-text">
+                        <span class="date">Juillet - Août 2024</span>
+                        <h2>Intermarché</h2>
+                        <p>Job d'été</p>
+                    </div>
+                </div>
+                <div class="experiences-container-text default-container">
+                    <p>Magasin alimentaire. Gestion Stocks, mise en rayon & préparateur de commandes drive.
+                        <br><br>
+                        <strong>Aptitudes :<br></strong>Rigueur et sens de l'organisation.<br><br>Travailler dans la
+                        grande distribution m'a appris l'efficacité, la gestion logistique et
+                        l'autonomie.
+                    </p>
+                </div>
             </div>
-            <div class="timeline-container">
-                <div class="timeline-content">
-                    <span class="date">Mars 2021</span>
-                    <h2>Société Gardin - Stage d'observation</h2>
-                    <p>Sécurité des données informatiques.</p>
+
+            <div class="experiences-item default-container">
+                <div class="experiences-header">
+                    <div class="experiences-header-image default-container">
+                        <img src="assets/images/parcours/adeo.png" alt="ADEO Logo">
+                    </div>
+                    <div class="experiences-header-text">
+                        <span class="date">Mars 2022</span>
+                        <h2>ADEO</h2>
+                        <p>Stage d'observation</p>
+                    </div>
+                </div>
+                <div class="experiences-container-text default-container">
+                    <p>Société de commerce de bricolage et décoration. Observation et création d'un site web.
+                        <br><br>
+                        <strong>Aptitudes :<br></strong> Structurer un projet et méthode SCRUM.<br><br>J'ai pu suivre le
+                        mini cycle de vie d'un projet web, de l'observation du besoin à la création d'un site pour un
+                        grand groupe.
+                    </p>
+                </div>
+            </div>
+
+            <div class="experiences-item default-container">
+                <div class="experiences-header">
+                    <div class="experiences-header-image default-container">
+                        <img class="icon-rounded" src="assets/images/parcours/gardin.png" alt="Société Gardin Logo">
+                    </div>
+                    <div class="experiences-header-text">
+                        <span class="date">Mars 2021</span>
+                        <h2>Société Gardin</h2>
+                        <p>Stage d'observation</p>
+                    </div>
+                </div>
+                <div class="experiences-container-text default-container">
+                    <p>Société informatique. Découverte du monde professionnel et observation du travail en Freelance.
+                        <br><br>
+                        <strong>Aptitudes :<br></strong> Curiosité et esprit d’analyse.<br><br>
+                        Cette expérience m’a permis de mieux comprendre l’organisation d’une entreprise et le rôle de
+                        l’informatique au quotidien.
+                    </p>
+                </div>
+            </div>
+
+            <div class="experiences-item default-container">
+                <div class="experiences-header">
+                    <div class="experiences-header-image default-container">
+                        <img src="assets/images/parcours/restosDuCoeur.png" alt="Restos du Cœur Logo">
+                    </div>
+                    <div class="experiences-header-text">
+                        <span class="date">Février 2017</span>
+                        <h2>Restos du Cœur</h2>
+                        <p>Stagiaire service client</p>
+                    </div>
+                </div>
+                <div class="experiences-container-text default-container">
+                    <p>Association caritative à Blendecques. Participation à l’accueil et à la distribution alimentaire.
+                        <br><br>
+                        <strong>Aptitudes :<br></strong> Sens de l’écoute et relationnel.<br><br>
+                        Confiance en soi pour parler aux gens et comprendre leurs besoins.
+                    </p>
                 </div>
             </div>
 
 
-            <div class="timeline-container-image">
-                <img src="assets/images/parcours/adeo.png" alt="Adeo Logo">
-            </div>
-            <div class="timeline-container">
-                <div class="timeline-content">
-                    <span class="date">Mars 2022</span>
-                    <h2>ADEO - Stage d'observation</h2>
-                    <p>Société de commerce de bricolage et décoration. Observation et création d'un site web en HTML
-                        et CSS.</p>
-                </div>
-            </div>
-
-            <div class="timeline-container-image">
-                <img src="assets/images/parcours/intermarche.png" alt="">
-            </div>
-            <div class="timeline-container">
-                <div class="timeline-content">
-                    <span class="date">Juillet - Août 2024</span>
-                    <h2>Intermarché - Job d'été</h2>
-                    <p>Magasin alimentaire. Gestion Stocks, mise en rayon & préparateur de commandes drive.</p>
-                </div>
-            </div>
-
-            <div class="timeline-container-image">
-                <img src="assets/images/parcours/chocmod.png" alt="">
-            </div>
-            <div class="timeline-container">
-                <div class="timeline-content">
-                    <span class="date">Juillet - Août 2025</span>
-                    <h2>CHOCMOD - Job d'été</h2>
-                    <p>Usine alimentaire. Ligne de production et maintenance.</p>
-                </div>
-            </div>
         </div>
     </div>
-
 
     <div class="phone-display">
         <h1>🚨 Portfolio version mobile en construction 🚨</h1>

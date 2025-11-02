@@ -59,6 +59,8 @@ nav {
 }
 
 .folder-items>div>a>h2 {
+    font-family: Rubik, sans-serif;
+    font-size: 1rem;
     color: white;
     display: none;
 }
@@ -441,6 +443,7 @@ nav {
     font-size: 4vw;
     font-family: "Archivo Black", sans-serif;
     opacity: 90%;
+    text-align: center;
     color: #df5800;
     margin-inline: 2vw;
 }
@@ -547,6 +550,7 @@ nav {
 
 .projets-grid>a>img {
     width: 100%;
+    border-radius: 15px;
 }
 
 .projets-description {
@@ -607,9 +611,6 @@ nav {
 .projets-language>img:hover {
     border-color: #cfff8f;
 }
-
-
-
 
 
 #section-aptitudes {
@@ -726,6 +727,97 @@ nav {
     background-color: rgb(54, 54, 54);
 }
 
+
+#experiences {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    margin-bottom: 30vh;
+}
+
+.experiences-grid {
+    display: flex;
+    width: 85vw;
+    row-gap: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    flex-direction: row;
+}
+
+.experiences-item {
+    border-radius: 15px;
+    width: 380px;
+    font-family: Rubik, sans-serif;
+}
+
+.experiences-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+}
+
+.experiences-header-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    margin-inline: 10px;
+    background-color: #000000;
+}
+
+.experiences-header-image>img {
+    width: 80%;
+}
+
+.experiences-header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experiences-header-text>span {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.experiences-header-text>h2 {
+    margin-block: 2px;
+    color: #cfff8f;
+}
+
+.experiences-header-text>p {
+    margin: 0;
+}
+
+.experiences-container-text {
+    background: #000000;
+    margin-inline: 10px;
+    margin-block: 10px;
+    padding: 10px;
+}
+
+.experiences-container-text>p {
+    margin-block: 5px;
+}
+
+.experiences-container-text>p>strong {
+    line-height: 1.8;
+    color: #df5800;
+}
+
+
+
+.icon-rounded {
+    border-radius: 50%;
+}
+
+
 footer {
     position: relative;
     display: flex;
@@ -822,6 +914,10 @@ footer {
 
 .footer-social>a>img {
     height: 80%;
+}
+
+.phone-display {
+    display: none;
 }
 
 @media screen and (max-width: 1000px) {
