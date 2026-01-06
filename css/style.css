@@ -35,6 +35,8 @@ nav {
 .folder>div>a.closed {
     transition: 0.3s ease-in;
     transform: rotateZ(-90deg);
+    background-color: rgba(207, 255, 143, 0.22);
+    border-radius: 14px;
 }
 
 .folder-items.closed {
